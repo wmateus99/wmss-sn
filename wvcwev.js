@@ -31,7 +31,7 @@ function validateForm() {
     if (isValid) {
         successMessage.style.display = 'block';
         setTimeout(function() {
-            window.location.href = 'kwhegdwy3uer523e8o123ec2y13ofeb47qwrec854y9vi4uetvg6o48tc336o2rcg23ogcr72w3r5svfdcnagogicygr352re52yg36554rc2bo6fdwtuifeduv4ys3aif3rrf2c2wi3qrfwco4frc73fr2co83rdtfksevcfkajsegvfqwcketufrw3ofoucr327rgcvsf23xr34tc3w5hb45wby45by45wkgjshhredcwegr1ex1xe.html'; // Redirecionar para a página de sucesso
+            window.location.href = 'kwhegdwy3uer523e8o123e1xe.html'; // Redirecionar para a página de sucesso
         }, 2000);
     }
 
