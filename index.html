@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Perguntas</title>
+    <style>
+        /* Reset geral */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #181818;
+            color: #f5f5f5;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* Formulário */
+        .form-container {
+            background-color: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Título do formulário */
+        h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #f5f5f5;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        /* Questões */
+        .question {
+            margin-bottom: 25px;
+        }
+
+        .question label {
+            display: block;
+            color: #ddd;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .question input {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 2px solid #444;
+            border-radius: 8px;
+            background-color: #333;
+            color: #fff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .question input:focus {
+            border-color: #5b80a5;
+            box-shadow: 0 0 8px rgba(91, 128, 165, 0.7);
+            outline: none;
+        }
+
+        /* Botão de envio */
+        .btn-submit {
+            width: 100%;
+            background-color: #5b80a5;
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #4a6a87;
+        }
+
+        /* Mensagem de erro */
+        .error {
+            color: #ff4d4d;
+            font-size: 14px;
+            display: none;
+        }
+
+        /* Mensagem de sucesso */
+        .success-message {
+            color: #28a745;
+            font-size: 16px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .form-container {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Formulário de Perguntas</h2>
+        <form id="quizForm" onsubmit="return validateForm()">
+            <div class="question">
+                <label for="q1">1. Qual é a capital do Brasil?</label>
+                <input type="text" id="q1" name="q1">
+                <span class="error" id="errorQ1">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q2">2. Qual é a fórmula da água?</label>
+                <input type="text" id="q2" name="q2">
+                <span class="error" id="errorQ2">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q3">3. Quem escreveu "Dom Casmurro"?</label>
+                <input type="text" id="q3" name="q3">
+                <span class="error" id="errorQ3">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q4">4. Em que ano o Brasil foi descoberto?</label>
+                <input type="text" id="q4" name="q4">
+                <span class="error" id="errorQ4">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q5">5. Qual é o maior planeta do sistema solar?</label>
+                <input type="text" id="q5" name="q5">
+                <span class="error" id="errorQ5">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q6">6. Quem pintou a Mona Lisa?</label>
+                <input type="text" id="q6" name="q6">
+                <span class="error" id="errorQ6">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q7">7. Qual é o nome do primeiro presidente do Brasil?</label>
+                <input type="text" id="q7" name="q7">
+                <span class="error" id="errorQ7">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q8">8. Quantos estados tem o Brasil?</label>
+                <input type="text" id="q8" name="q8">
+                <span class="error" id="errorQ8">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q9">9. Qual é o símbolo químico do ouro?</label>
+                <input type="text" id="q9" name="q9">
+                <span class="error" id="errorQ9">Resposta incorreta.</span>
+            </div>
+            <div class="question">
+                <label for="q10">10. Em que continente fica o Egito?</label>
+                <input type="text" id="q10" name="q10">
+                <span class="error" id="errorQ10">Resposta incorreta.</span>
+            </div>
+            <button type="submit" class="btn-submit">Enviar</button>
+            <div class="success-message" id="successMessage">Parabéns! Você acertou todas as perguntas!</div>
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+
+    <script src="wvcwev.js"></script>
+
+</body>
+</html>
